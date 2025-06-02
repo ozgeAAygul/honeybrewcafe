@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #fafafa;
+}
+
+h1 {
+  text-align: center;
+  color: purple;
+}
+
+img {
+  border-radius: 20px;
+}
+
+.container {  /*cantainer diye bir kutucuk ekledim içine de left bar ve right bar adında iki kutucuğu yerleştirdim bu şekilde istediğim yapıyı elde ettim*/
+  
+  display: flex; /*benim istediğim left and right barı yan yana koymak ilk başta float lefti denedim ama bu çok karmaşık ve kullanması zor olduğu için bunu kullandık bu daha moder ve de işime yaradı*/
+  
+}
+
+.left-bar ul {
+  list-style-type:none;
+  padding: 0;
+}
+
+.left-bar a {
+  text-decoration: none; /*yazının altı çiziliydi onu yok etmek için yazının olduğu etiketi seçtim*/
+  color: brown;
+  font-size: 18px;
+  display: block;/*diğer kutularla karışmasın*/
+  margin: 10px 0;
+}
+
+.left-bar a:hover { /*left bar a nın üzerine gelince ne olmasını istediğimi açıkladım*/
+  color: black;
+}
+
+.left-bar {
+  width: 200px;
+  height: 100vh; /*sol menü ekranın tam yüksekliği kadar lsun diye bunu yazdık*/
+  box-sizing: border-box; /*normalde csste width ve height sadece içeriği kapsar padding border ekleyince kutu büyür 
+  border box dersen padding border bu width ve heightin içine eklenir
+  bu sayede daha kontrollü taşmayan dengeli kutular oluşur*/
+  position: fixed; /*left bar ekrana sabitlenndi scroll yapsan bile kıpırdamaz*/
+  top: 0;
+  left: 0; /*bu ikili position ile kullanılır sol üste sabitledik*/
+  padding: 20px;
+  
+  line-height: 1.8; /*satırlar arası boşluğu ayarladım okunaklı olması adına 1.5 ile 2 arasında bir değer verdim*/
+  background-color: #f3f3f3;
+ 
+}
+
+.right-bar {
+  width: 800px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  line-height: 1.5;
+  float: left; 
+}
+
+.main-bar {
+margin-left: 220px; /*left bardan sonra gelsin diye */ 
+ padding: 20px;
+}
+
+
+
+.btn {
+  padding: 10px 20px;
+  margin: 40px auto;
+  border: none;
+  background-color: purple ;
+  border-radius: 25px;
+  box-shadow: 3px 8px 30px black;
+  /*  display: flex; bu içindeki elemanı esnek bir şekilde hizalamak için kullanılır */
+  /* justify-content: right; yatay hizalama için kullanılır */
+  /* align-items: center; dikeyde ortalamak için kullanılır */
+  display: block;
+  width: fit-content;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+} 
+
+.btn:hover {
+  box-shadow: 3px 8px 25px black;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.d-carts {
+  width: 200px;
+  float: left;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) ;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #fff;
+} 
+
+.d-carts:hover {
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+
+address {
+  line-height: 1.8;
+
+}
+
+.story {
+  line-height: 1.8;
+  font-size: 25px;
+}
